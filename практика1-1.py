@@ -1,4 +1,9 @@
 class Room():
+    """простая структурка
+
+    все и так понятно
+
+    """
     def __init__(self, typ, n):
         types = ["актовый зал", "кабинет для занятий", "учительская", "кабинет директора"]
         if type(typ) == str:
@@ -13,6 +18,11 @@ class Room():
         return f"{self.typ} {self.n}"
 
 class Person():
+    """простая структурка
+
+    все и так понятно
+
+    """
     def __init__(self, typ, name, surname, thing):
         types = ["родитель", "ученик", "учитель", "директор"]
         if type(typ) == str:
@@ -26,6 +36,11 @@ class Person():
         self.thing = thing
 
     def enter(self, room):
+        """
+
+        :param room: куда чел хочет войти
+        :return: лог о успехе входа
+        """
         print(f"{self.typ} {self.name} {self.surname} пытается войти в {room.typ} {room.n}: {['неудача', 'успех'][room.al <= self.al]}")
 
     def __str__(self):
